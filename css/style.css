@@ -1,0 +1,478 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.picture-roll{
+    width: 45%;
+    height: 100%;
+  
+}
+.form-box{
+    width: 55%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+   
+
+}
+/*** creating image slider ***/
+.picture-roll .slider{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: animate 16s ease-in-out infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@keyframes animate{
+    0%, 100%{
+        background-image: url(../images/1048538.jpg);
+    }
+    25%{
+        background-image: url(../images/1423494.png);
+    }
+    50%{
+        background-image: url(../images/216554.jpg);
+    }
+    75%{
+        background-image: url(../images/845880.jpg);
+    }
+}
+
+/** styling Form boxes **/
+.input-group{
+    width: 60%;
+    height: 60% ;
+    position: absolute;
+    margin: 20% 15%;
+    transition: .5s;
+
+    
+}
+/** Reposition Form boxes **/
+#Signin{
+    right: 1%;
+}
+#Signup{
+    right: 100%;
+    
+}
+
+/** styling toggle-btn button **/
+.toggle-btn{
+    width: 22%;
+    height: 42px;
+    float: right;
+    font-family: sans-serif;
+    background: red;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#intro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    border-left: 5px solid #DAA520;
+    padding-left: 9px;
+    font-weight: 800;
+    margin-top: 10%;
+}
+#intro2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin-left: 3%;
+    font-weight: 500;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+a{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-left: 1%;
+    transition: .2s;
+}
+a:hover{
+    border-bottom: 2px solid #2F2F2F;
+    transition: .2s;
+}
+
+/** styling the input boxes **/
+.user-box{
+    margin-top: 30px;
+    position: relative;
+}
+.user-box input{
+    margin-top: 10px;
+    width: 90%;
+    padding: 1px 0;
+    color: #2F2F2F;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box input:focus ~ label,
+.user-box input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #2F2F2F;
+    font-size: 12px;
+}
+
+.user-box input:focus,
+.user-box input:valid{
+    border-bottom: 1px solid #DAA520;
+}
+.user-box input:hover ~ label{
+    color: #DAA520;
+}
+
+/** styling font awesome icons **/
+#user{
+    font-size: 20px;
+    color: red;
+    padding: 8px;
+    padding-bottom: 2px;
+    transition: .2s;
+}
+#pass{
+    font-size: 22px;
+    color: red;
+    padding: 8px;
+    padding-bottom: 2px;
+    transition: .2s;
+}
+.user-box input:focus ~ i,
+.user-box input:valid ~ i{
+    top: 0px;
+   /* transform: translateX(-610px); */
+    color: #2F2F2F;
+    font-size: 12px;
+    border-bottom: 1px solid #DAA520;
+    transition: .2s;
+}
+.submit{
+    width: 90%;
+    height: 50px;
+    margin-top: 5%;
+    color: white;
+    background: #2F2F2F;
+    border: none;
+    font-size: 1rem;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 3%;
+    transition: .5s;
+}
+.submit:hover{
+    background: #DAA520;
+}
+
+/** Styling the Signup Form **/
+.user-box2,
+.user-box3,
+.user-box4{
+    position: relative;
+}
+.user-box2{
+    margin-top: 30px;
+}
+.user-box2 .input-user{
+    width: 40%;
+    margin-top: 10px;
+    padding: 1px 0;
+    font-size: 16px;
+    color: #2F2F2F;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box2 .input-last{
+    width: 40%;
+    margin-top: 10px;
+    padding: 1px 0;
+    font-size: 16px;
+    color: #2F2F2F;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box2 label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box2 #label1{
+    margin-left: 46.5%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box2 .input-user:focus ~#label0,
+.user-box2 .input-user:valid ~#label0,
+.user-box2 .input-last:focus ~#label1,
+.user-box2 .input-last:valid ~#label1{
+    top: -20px;
+    left: 0;
+    color: #2F2F2F;
+    font-size: 12px;
+}
+.user-box2 input:hover ~ label{
+    color: #DAA520;
+}
+.user-box2 input:hover ~ #label1{
+    color: #DAA520;
+}
+
+.user-box2 input:focus,
+.user-box2 input:valid{
+    border-bottom: 1px solid #DAA520;
+}
+
+/** styling firstname & lastname icon **/
+#user1,
+#user2{
+    font-size: 20px;
+    color: red;
+    padding: 8px;
+    padding-bottom: 2px;
+}
+.user-box2 .input-user:focus  ~ #user1,
+.user-box2 .input-user:valid  ~ #user1{
+    top: 0px;
+   /* transform: translateX(-610px); */
+    border-bottom: 1px solid #DAA520;
+    transition: .2s;
+    font-size: 20px;
+    color: red;
+}
+.user-box2 .input-last:focus  ~ #user2,
+.user-box2 .input-last:valid  ~ #user2{
+    top: 0px;
+   /* transform: translateX(-610px); */
+    border-bottom: 1px solid #DAA520;
+    transition: .2s;
+    font-size: 20px;
+    color: red;
+}
+
+.user-box3 input{
+    width: 87%;
+    font-size: 16px;
+    padding: 1px 0;
+    color: #2F2F2F;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box3 label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1px 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.user-box3 input:focus ~ label,
+.user-box3 input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #2F2F2F;
+    font-size: 12px;
+}
+.user-box3 input:hover ~label{
+    color: #DAA520;
+}
+.user-box3 input:focus,
+.user-box3 input:valid{
+    border-bottom: 1px solid #DAA520;
+} 
+
+/** styling the mail icon **/
+#email{
+    font-size: 20px;
+    color: red;
+    padding: 8px;
+    padding-bottom: 2px;
+}
+.user-box3 input:focus ~ #email,
+.user-box3 input:valid ~ #email{
+    border-bottom: 1px solid #DAA520;
+    transition: .2s;
+    font-size: 20px;
+    color: red;
+}
+/** style the password & confirm password **/
+.user-box4{
+    position: relative;
+    margin-top: 30px;
+}
+.user-box4 .password-pass,
+.user-box4 .password-con{
+    width: 40%;
+    margin-top: 10px;
+    padding: 1px 0;
+    font-size: 16px;
+    color: #2F2F2F;
+    margin-bottom: 0px;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box4 #label-pass{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box4 #label-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 46.5%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-box4 .password-pass:focus ~ #label-pass,
+.user-box4 .password-pass:valid ~ #label-pass,
+.user-box4 .password-con:focus ~ #label-con,
+.user-box4 .password-con:valid ~ #label-con{
+    top: -20px;
+    left: 0;
+    color: #2F2F2F;
+    font-size: 12px;
+}
+
+.user-box4 input:hover ~ #label-pass,
+.user-box4 input:hover ~ #label-con{
+    color: #DAA520;
+}
+.user-box4 input:focus,
+.user-box4 input:valid{
+    border-bottom: 1px solid #DAA520;
+}
+#lock,
+#lock2{
+    font-size: 20px;
+    color: red;
+    padding: 8px;
+    padding-bottom: 2px;
+}
+.user-box4 .password-pass:focus ~ #lock,
+.user-box4 .password-pass:valid ~ #lock,
+.user-box4 .password-con:focus ~  #lock2,
+.user-box4 .password-con:valid ~ #lock2{
+    top: 0px;
+    border-bottom: 1px solid #DAA520;
+    transition: .2s;
+    font-size: 20px;
+    color: red;
+}
+
+/** styling calender & Date of Birth **/
+#dob{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #2F2F2F;
+    margin-right: 5%;
+}
+.input-calen{
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    margin-top: 10px;
+    outline: none;
+    background: transparent;
+    margin-bottom: 5%;
+}
+.input-calen:hover{
+    cursor: pointer;
+}
+#terms{
+    text-decoration: none;
+    color: #2F2F2F;
+    margin-left: 50%;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    transition: .5s;
+    padding: 7px;
+}
+#terms:hover{
+    color: #DAA520;
+    border-bottom: 2px solid #2F2F2F;
+    border-top: 2px solid maroon;
+    width: auto;
+    letter-spacing: 5px;
+    text-align: center;
+    transition: .5s;
+}
+
+
+
+
+

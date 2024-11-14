@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+    <meta name="author"         content="Roach">
+    <meta name="description"    content="Forms in HTML">
+    <meta name="keywords"       content="signup + login + data + forms">
+
+    <!-- adding an image as FAV icon -->
+    <link href="images/roach.ico"   rel="icon">
+
+    <!-- linking external css file -->
+    <link href="css/style.css"      rel="stylesheet" type="text/css">
+
+    <!-- linking external media query css file -->
+    <link href="css/mediaQuery.css" rel="stylesheet" type="text/css">
+
+    <!-- linking font-awesome styling sheet file -->
+    <link href="fonts/css/all.css"  rel="stylesheet" type="text/css">
+
+    <title>Login | Signup</title>
+</head>
+
+
+
+<body>
+    
+    <!-- creating a picture slide-->
+    <div class="picture-roll">
+        <div class="slider"></div>
+    </div>
+
+    <!-- creating a form box -->
+    <div class="form-box">
+
+        <!-- First form box -->
+        <form id="Signin" class="input-group">
+            <!-- creating a button with an onclick function : javascript -->
+            <button type="button" class="toggle-btn" onclick="Signup()">Signup</button>
+            <br>
+
+            <!-- creating an introduction text -->
+            <h2 id="intro">Login to your <span id="intro2">Account</span></h2>
+            <label>Check out our Gaming Community?</label>
+
+            <!-- creating a hyperlink -->
+            <a href="#">Check it</a>
+            <br>
+
+            <!-- Creating Textboxes -->
+            <div class="user-box">
+                <input type="text" required>
+                <i class="fa-solid fa-user" aria-hidden="true" id="user"></i>
+                <label>Username</label>
+            </div>
+
+            <div class="user-box">
+                <input type="password" required>
+                <i class="fa-solid fa-lock" aria-hidden="true" id="pass"></i>
+                <label>Password</label>
+            </div>
+
+            <!-- Creating a login button -->
+            <button type="submit" class="submit" name="submit">SignIn</button>
+        </form>
+
+        <!--- Creating Second Form -->
+        <form id="Signup" class="input-group">
+            <button type="button" class="toggle-btn" onclick="Signin()">Signin</button>
+            <br>
+
+            <h2 id="intro">Create an Account <span id="intro2"> Now</span></h2>
+            <br>
+            <label>Check out our Gaming Community?</label>
+
+            <a href="#">Check it</a>
+            <br>
+
+            <!-- Creating input textboxes -->
+            <div class="user-box2">
+                <input type="text" class="input-user" required>
+                <i class="fa-solid fa-user" aria-hidden="true" id="user1"></i>
+                <label id="label0">First Name</label>
+
+                <input type="text" class="input-last" required>
+                <i class="fa-solid fa-user" aria-hidden="true" id="user2"></i>
+                <label id="label1">Last Name</label>
+            </div>
+            <br>
+
+            <!-- creating an email textbox -->
+            <div class="user-box3">
+                <input type="email" class="input-email" required>
+                <i class="fa-solid fa-envelope" aria-hidden="true" id="email"></i>
+                <label>Email</label>
+            </div>
+
+            <!-- creating password textboxes -->
+            <div class="user-box4">
+                <input type="password" class="password-pass" required>
+                <i class="fa-solid fa-lock" aria-hidden="true" id="lock"></i>
+                <label id="label-pass">Password</label>
+
+                <input type="password" class="password-con" required>
+                <i class="fa-solid fa-lock" aria-hidden="true" id="lock2"></i>
+                <label id="label-con">Confirm Password</label>
+            </div>
+            <br>
+
+            <!-- creating Date time picker -->
+            <span id="dob">Date Of Birth</span>
+            <input type="date" data-date-inline-picker="true" class="input-calen">
+            <br>
+
+            <!-- creating a hyperlink -->
+            <a href="#" id="terms">Terms & Conditions</a>
+            <br>
+
+            <!-- creating a button -->
+            <button type="submit" class="submit" name="submit">Create Account</button>
+
+
+
+        </form>
+    </div>
+
+    <!-- Linking external javascript file -->
+    <script  type="text/javascript" src="javascript/functions.js"></script>
+
+
+
+</body>
+</html>
